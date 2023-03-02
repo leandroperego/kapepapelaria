@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&family=Kreon:wght@500;600;700&family=Mulish:wght@500;600;700;800;900&family=Patrick+Hand&family=Roboto+Mono:wght@100;200;300&family=Rubik:wght@500;600;700;800&family=Space+Mono&family=Ubuntu:wght@300;400&family=Yeseva+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    /* FONTS */
+    --font60: 'Josefin Sans', sans-serif;
+    --font30: 'Yeseva One', cursive;
+
+    /* --font60: 'Roboto Mono', monospace;
+    --font30: 'Rubik', sans-serif; */
+    
+    /* --font60: 'Space Mono', monospace;
+    --font30: 'Mulish', sans-serif; */
+
+    /* --font60: 'Ubuntu', sans-serif;
+    --font30: 'Kreon', serif; */
+
+    /* --font60: 'Roboto Mono', monospace;
+    --font30: 'Patrick Hand', cursive; */
+
+    /* COLORS */
+    --azul-marinho: #121822;
+    --rosa-escuro: #fb0060;
+    --amarelo: #f6e148;
+    --branco: whitesmoke;
+    /* LIGHTS */
+    --turquesa: #6bbab3;
+    --roxo: #5f5ca5;
+    --rosa: #d56ea6;
+    --laranja: #e8ad62;
+
+    /* PASTEL */
+    /* --turquesa: #96cbc7;
+    --roxo: #8480ba;
+    --rosa: #de98bf;
+    --laranja: #e6ab82; */
+
+    /* ORIGINAIS LOGO */
+    /* --turquesa: #87C5C9;
+    --roxo: #534B9A;
+    --rosa: #C7286D;
+    --laranja: #da9933; */
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--branco);
+}
+
+.logo{
+    height: 100%;
+}
+
+#initial-page{
+    display: flex;
+    flex-direction: column;
+}
+
+header#header-body,
+section#container-footer-initial-page{
+    height: 20%;
+}
+
+header#header-body{
+    display: flex;
+    flex-direction: column;
+}
+
+article#container-main-initial-page{
+    height: 60%;
+}
+
+section#header-logo{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--azul-marinho);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    background-color: var(--rosa-escuro);
+    color: var(--azul-marinho);
+    border: 2px solid var(--azul-marinho);
+    border-radius: 0 0 3rem 3rem;
+}
+
+nav div#submenu-nav{
+    width: 90%;
+    margin: 0 auto;
+    height: 80%;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+nav div#container-nav-menu{
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 1rem;
+    position: relative;
+}
+
+span#span-icon-chevron{
+    position: absolute;
+    right: 4rem;
+    opacity: 0;
+    animation: surgir 1000ms 500ms forwards;
+}
+
+.container-vw-vh{
+    width: 100vw;
+    height: 100vh;
+}
+
+.min-height-submenu{
+    animation: abriSubMenu 1000ms forwards;
+}
+
+.display-invisible{
+    display: none;
+}
+
+@keyframes abriSubMenu{
+    0%{
+        min-height: 0;
+    }
+
+    100%{
+        min-height: 30rem;
+    }
+}
+
+@keyframes surgir{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
