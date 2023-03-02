@@ -198,6 +198,29 @@ section#container-nossa-historia h2{
     padding-bottom: 2rem;
 }
 
+#container-img-proprietaria{
+    width: 15rem;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+img#foto-proprietaria{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 5px 8px 26px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 8px 26px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 8px 26px 1px rgba(0,0,0,0.75);
+    margin-bottom: 1rem;
+}
+
+span#text-proprietaria{
+    font-size: 1.2rem;
+}
+
 footer{
     max-width: 1000px;
     background-color: var(--azul-marinho);
