@@ -120,6 +120,20 @@ span#span-icon-chevron{
     animation: surgir 1000ms 500ms forwards;
 }
 
+section#container-footer-initial-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#span-icon-footer-initial-page{
+    font-size: 5rem;
+    animation: moveDown 2000ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+}
+
 .container-vw-vh{
     width: 100vw;
     height: 100vh;
@@ -150,5 +164,18 @@ span#span-icon-chevron{
 
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes moveDown{
+    0%{
+        position: relative;
+        top: -50px;
+        opacity: 0;
+    }
+
+    100%{
+        top: 0;
+        opacity: 0.8;
     }
 }
