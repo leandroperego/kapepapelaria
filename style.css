@@ -279,6 +279,11 @@ article#article-main-3{
     /* height: 30rem; */
   }
 
+.cards-container{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 section.produto{
     height: 100%;
 }
@@ -404,3 +409,5 @@ a{
     text-decoration: none;
     color: black;
 }
+
+  
