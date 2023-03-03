@@ -18,3 +18,25 @@ function showSubMenu(){
         icon_menu.className = "fa fa-times";
     }
 }
+
+// CARROSSEL
+const carousel = document.querySelector('.carousel');
+const carouselContainer = carousel.querySelector('.carousel-container');
+const carouselItems = carousel.querySelectorAll('.carousel-item');
+
+let currentIndex = 0;
+let translateX = 0;
+
+function slideCarousel() {
+  currentIndex++;
+
+  if (currentIndex > carouselItems.length - 1) {
+    currentIndex = 0;
+  }
+
+  translateX = -currentIndex * carouselItems[0].offsetWidth;
+
+  carouselContainer.style.transform = `translateX(${translateX}px)`;
+}
+
+// setInterval(slideCarousel, 3000);
