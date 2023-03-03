@@ -261,7 +261,8 @@ article#article-main-3{
     position: relative;
     overflow: hidden;
     width: 100%;
-    border: 3px solid;
+    border-top: 3px solid;
+    padding-top: 5rem;
   }
   
   .carousel-container {
