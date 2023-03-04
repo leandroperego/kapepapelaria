@@ -19,6 +19,12 @@ function showSubMenu(){
     }
 }
 
+// POSICAO ICONS ASIDE PRODUTOS + VENDIDOS
+let iconLeft = document.querySelector("#icon-left");
+let iconRight = document.querySelector("#icon-right");
+
+// AJUSTAR POSICIONAMENTO SETAS E PROGRAMAR CLIQUES
+
 // CARROSSEL
 // const carousel = document.querySelector('.carousel');
 // const carouselContainer = carousel.querySelector('.carousel-container');
@@ -57,6 +63,8 @@ function onTouchStart(e) {
   startPosition = e.touches[0].clientX;
   isDragging = true;
 
+  mudarCorIconsAside();
+
   // interrompe a animação atual, se houver
   cancelAnimationFrame(animationId);
 }
@@ -67,6 +75,9 @@ function onTouchMove(e) {
     currentTranslate = prevTranslate + currentPosition - startPosition;
     // console.log("currentTranslateInicial", currentTranslate);
   }
+
+  mudarCorIconsAside();
+  
 }
 
 function onTouchEnd() {
@@ -94,6 +105,8 @@ function onTouchEnd() {
 
   prevTranslate = currentTranslate;
 
+  mudarCorIconsAside();
+
   // anima o scroll para o card selecionado
   requestAnimationFrame(() => {
     animateScroll();
@@ -119,9 +132,35 @@ function animateScroll() {
   }
 }
 
+function verificarPosicaoScroll(){
+  return cardsContainer.scrollLeft + cardsContainer.clientWidth;
+}
+
+function fimScroll(){
+  console.log(verificarPosicaoScroll() >= cardsContainer.scrollWidth - 1)
+  return verificarPosicaoScroll() >= cardsContainer.scrollWidth - 1;
+}
+
+function inicioScroll(){
+  console.log(cardsContainer.scrollLeft == 0)
+  return cardsContainer.scrollLeft == 0;
+}
+
+function mudarCorIconsAside(){
+  if (fimScroll()){
+    iconRight.style.color = "gray";
+  } else if(inicioScroll()){
+    iconLeft.style.color = "gray";
+  } else{
+    iconLeft.style.color = "inherit";
+    iconRight.style.color = "inherit";
+  }
+}
+
 cardsContainer.addEventListener('touchstart', onTouchStart);
 cardsContainer.addEventListener('touchmove', onTouchMove);
 cardsContainer.addEventListener('touchend', onTouchEnd);
+mudarCorIconsAside();
 
 
 

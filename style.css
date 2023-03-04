@@ -251,6 +251,7 @@ section#container-mais-vendidos{
     gap: 3rem;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 article#article-main-3{
@@ -278,6 +279,28 @@ article#article-main-3{
     min-height: 300px;
     /* height: 30rem; */
   }
+
+aside{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.icon-aside{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+aside.aside-left{
+    left: -10%;
+    /* color: gray; */
+}
+
+aside.aside-right{
+    right: -10%;
+    color: var(--azul-marinho);
+}
 
 .cards-container{
     overflow-x: auto;
@@ -409,5 +432,4 @@ a{
     text-decoration: none;
     color: black;
 }
-
   
