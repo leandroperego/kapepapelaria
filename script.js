@@ -50,6 +50,8 @@ let prevTranslate = 0;
 let animationId = 0;
 let currentIndex = 0;
 
+let cardContainerTranslate = cardsContainer.clientWidth;
+
 function onTouchStart(e) {
   currentIndex = Array.from(cardsContainer.children).indexOf(e.target);
   startPosition = e.touches[0].clientX;
@@ -63,6 +65,7 @@ function onTouchMove(e) {
   if (isDragging) {
     const currentPosition = e.touches[0].clientX;
     currentTranslate = prevTranslate + currentPosition - startPosition;
+    // console.log("currentTranslateInicial", currentTranslate);
   }
 }
 
@@ -72,18 +75,23 @@ function onTouchEnd() {
   // determina para qual card o usuário "arrastou" e ajusta o deslocamento
   const cards = Array.from(cardsContainer.children);
   const cardWidth = cards[0].getBoundingClientRect().width;
-  const cardTranslate = currentTranslate / cardWidth;
+  // const cardTranslate = currentTranslate / cardWidth;
+  const cardTranslate = cardContainerTranslate / cardWidth;
   const roundCardTranslate = Math.round(cardTranslate);
+  // console.log("cardnosoltou", cardTranslate)
 
   if (roundCardTranslate < 0) {
     currentIndex = 0;
   } else if (roundCardTranslate >= cards.length - 1) {
-    currentIndex = cards.length - 1;
+    currentIndex = cards.length -1;
   } else {
     currentIndex = roundCardTranslate;
   }
 
-  currentTranslate = currentIndex * -cardWidth;
+  currentTranslate = currentIndex;
+  // console.log("currentTranslate", currentTranslate);
+  // console.log("currentIndex", currentIndex);
+
   prevTranslate = currentTranslate;
 
   // anima o scroll para o card selecionado
