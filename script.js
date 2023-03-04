@@ -160,5 +160,34 @@ cardsContainer.addEventListener('touchmove', onTouchMove);
 cardsContainer.addEventListener('touchend', onTouchEnd);
 mudarCorIconsAside();
 
+// VALIDACAO FORM
+const form = document.querySelector('form');
+		const nameInput = document.querySelector('#name');
+		const phoneInput = document.querySelector('#phone');
+		const emailInput = document.querySelector('#email');
+		const subjectInput = document.querySelector('#subject');
+		const messageInput = document.querySelector('#message');
 
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			if (nameInput.value.trim() === '') {
+				alert('Por favor, preencha o campo Nome.');
+				nameInput.focus();
+				return;
+			}
+			if (phoneInput.value.trim() === '') {
+				alert('Por favor, preencha o campo Telefone.');
+				phoneInput.focus();
+				return;
+			}
+			if (emailInput.value.trim() === '') {
+				alert('Por favor, preencha o campo E-mail.');
+				emailInput.focus();
+				return;
+			}
+			if (subjectInput.value.trim() === '') {
+				alert('Por favor, preencha o campo Assunto.');
+				subjectInput.focus();
+      }
+    });
 

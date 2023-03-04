@@ -252,14 +252,29 @@
                     </button>
                 </section>
 
+                <hr>
+                
                 <h2>OU PREENCHA O FORMULÁRIO</h2>
                 <p>Que nós retornamos pra você.</p>
 
                 <section class="container-form">
-                    <form action="">
-                        <section class="container-inputs">
-                            <input type="text" name="nome" id="nome" placeholder="Informe seu nome" title="Insira seu nome">
-                        </section>
+                    <form>
+                        <label for="name">*Nome:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="email">*E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Assunto:</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="message">*Mensagem:</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <input type="submit" value="Enviar">
                     </form>
                 </section>
             </section>

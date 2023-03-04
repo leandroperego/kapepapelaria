@@ -337,6 +337,13 @@ section.produto{
     height: 100%;
 }
 
+section#container-contato{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 section#container-buttons-contact{
     /* border: 2px solid; */
     min-height: 10rem;
@@ -468,4 +475,45 @@ a{
     text-decoration: none;
     color: black;
 }
-  
+
+/* ESTILIZACAO FORM */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {  
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    opacity: 0.8;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
