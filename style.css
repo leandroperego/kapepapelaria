@@ -50,6 +50,10 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-size: 1.6rem;
     background-color: var(--branco);
@@ -381,8 +385,80 @@ button#btn-email{
 }
 
 footer{
-    max-width: 1000px;
+    /* height: 100vh; */
+    max-height: 1000px;
     background-color: var(--azul-marinho);
+    padding: 5rem;
+    color: var(--branco);
+    font-family: var(--font30);
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#footer-conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+footer a{
+    color: var(--color60);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer i{
+    color: var(--rosa-escuro);
+    width: 3rem;
+    text-align: center;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer li{
+    width: 100%;
+}
+
+footer #footer-redes{
+    display: flex;
+    justify-content: center;
+}
+
+#footer-redes a{
+    font-size: 2rem;
+}
+
+#footer-logo{
+    height: 5rem;
+    width: 100%;
+}
+
+#footer-logo a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#footer-logo a img{
+    height: 100%;
+}
+
+footer #direitos-autorais{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+footer #direitos-autorais i{
+    color: var(--color60);
 }
 
 /* CONFIGURAÇÕES GERAIS */
