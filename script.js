@@ -137,12 +137,10 @@ function verificarPosicaoScroll(){
 }
 
 function fimScroll(){
-  console.log(verificarPosicaoScroll() >= cardsContainer.scrollWidth - 1)
   return verificarPosicaoScroll() >= cardsContainer.scrollWidth - 1;
 }
 
 function inicioScroll(){
-  console.log(cardsContainer.scrollLeft == 0)
   return cardsContainer.scrollLeft == 0;
 }
 
