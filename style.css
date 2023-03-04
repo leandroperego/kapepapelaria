@@ -404,7 +404,7 @@ footer{
 }
 
 footer a{
-    color: var(--color60);
+    color: var(--branco) !important;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -549,6 +549,16 @@ main>article{
 
 a{
     text-decoration: none;
+    color: black;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
     color: black;
 }
 
