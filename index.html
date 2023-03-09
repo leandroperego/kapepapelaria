@@ -259,24 +259,31 @@
 
                 <section class="container-form">
                     <form>
-                        <label for="name">*Nome:</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="phone">Telefone:</label>
-                        <input type="tel" id="phone" name="phone">
-
-                        <label for="email">*E-mail:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="subject">Assunto:</label>
-                        <input type="text" id="subject" name="subject" required>
-
-                        <label for="message">*Mensagem:</label>
-                        <textarea id="message" name="message" required></textarea>
-
+                        <div class="form-group">
+                            <input type="text" class="form-inputs" id="name" name="name" required>
+                            <label for="name">Nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-inputs" id="phone" name="phone" required>
+                            <label for="phone">Telefone</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-inputs" id="email" name="email" required>
+                            <label for="email">E-mail</label>
+                        </div> 
+                        <div class="form-group">
+                            <input type="text" class="form-inputs" id="subject" name="subject" required>
+                            <label for="subject">Assunto</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-inputs" id="message" name="message" required></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
                         <input type="submit" value="Enviar">
                     </form>
+
                 </section>
+
             </section>
         </article>
 

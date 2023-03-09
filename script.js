@@ -191,3 +191,24 @@ const form = document.querySelector('form');
       }
     });
 
+// configuracao form
+let inputEmail = document.querySelector("#email");
+let labelInputEmail = inputEmail.nextElementSibling;
+
+inputEmail.addEventListener("blur", () => {
+  if (inputEmail.value != ""){
+    labelInputEmail.style.top = '-18px';
+    labelInputEmail.style.left = '0';
+    labelInputEmail.style.fontSize = '14px';
+  }else{
+    labelInputEmail.style.top = '10px';
+    labelInputEmail.style.left = '10px';
+    labelInputEmail.style.fontSize = '16px';
+  }
+});
+
+inputEmail.addEventListener("focus", () => {
+  labelInputEmail.style.top = '-18px';
+  labelInputEmail.style.left = '0';
+  labelInputEmail.style.fontSize = '14px';
+});
