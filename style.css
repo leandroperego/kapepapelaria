@@ -69,6 +69,10 @@ body{
     flex-direction: column;
 }
 
+header{
+    background-color: var(--azul-marinho);
+}
+
 header#header-body,
 section#container-footer-initial-page{
     height: 20%;
@@ -191,6 +195,18 @@ article#article-main-1{
     background-color: rgba(132, 128, 186, 0.3);
 }
 
+/* article#article-main-2{
+    background-color:
+} */
+
+article#article-main-3{
+    background-color: white;
+}
+
+article#article-main-4{
+    background-color: rgba(230, 171, 130, 0.2);
+}
+
 section#container-nossa-historia,
 section#container-canais-venda,
 section#container-mais-vendidos{
@@ -255,18 +271,6 @@ section#container-mais-vendidos{
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-/* article#article-main-2{
-    background-color:
-} */
-
-article#article-main-3{
-    background-color: white;
-}
-
-article#article-main-4{
-    background-color: rgba(230, 171, 130, 0.2);
 }
 
 .carousel {
@@ -480,6 +484,7 @@ main>article{
 .container-vw-vh{
     width: 100vw;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .min-height-submenu{
