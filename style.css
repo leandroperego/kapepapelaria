@@ -189,7 +189,6 @@ section#container-footer-initial-page{
 
 article#article-main-1{
     background-color: rgba(132, 128, 186, 0.3);
-
 }
 
 section#container-nossa-historia,
@@ -258,7 +257,15 @@ section#container-mais-vendidos{
     position: relative;
 }
 
+/* article#article-main-2{
+    background-color:
+} */
+
 article#article-main-3{
+    background-color: white;
+}
+
+article#article-main-4{
     background-color: rgba(230, 171, 130, 0.2);
 }
 
