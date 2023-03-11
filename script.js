@@ -88,8 +88,6 @@ function onTouchStart(e) {
   startPosition = e.touches[0].clientX;
   isDragging = true;
 
-  mudarCorIconsAside();
-
   // interrompe a animação atual, se houver
   cancelAnimationFrame(animationId);
 }
@@ -100,8 +98,6 @@ function onTouchMove(e) {
     currentTranslate = prevTranslate + currentPosition - startPosition;
     // console.log("currentTranslateInicial", currentTranslate);
   }
-
-  mudarCorIconsAside();
   
 }
 
@@ -114,7 +110,7 @@ function onTouchEnd() {
   // const cardTranslate = currentTranslate / cardWidth;
   const cardTranslate = cardContainerTranslate / cardWidth;
   const roundCardTranslate = Math.round(cardTranslate);
-  // console.log("cardnosoltou", cardTranslate)
+ 
 
   if (roundCardTranslate < 0) {
     currentIndex = 0;
@@ -129,8 +125,6 @@ function onTouchEnd() {
   // console.log("currentIndex", currentIndex);
 
   prevTranslate = currentTranslate;
-
-  mudarCorIconsAside();
 
   // anima o scroll para o card selecionado
   requestAnimationFrame(() => {
@@ -161,7 +155,7 @@ function verificarPosicaoScroll(){
   return cardsContainer.scrollLeft + cardsContainer.clientWidth;
 }
 
-function fimScroll(){
+function fimScroll(){ 
   return verificarPosicaoScroll() >= cardsContainer.scrollWidth - 1;
 }
 
@@ -185,7 +179,11 @@ cardsContainer.addEventListener('touchmove', onTouchMove);
 cardsContainer.addEventListener('touchend', onTouchEnd);
 mudarCorIconsAside();
 
-// VALIDACAO FORM
+cardsContainer.addEventListener("scroll", () => {
+  mudarCorIconsAside();
+})
+
+// ---------------VALIDACAO FORM--------------------------------------
 const form = document.querySelector('form');
 		const nameInput = document.querySelector('#name');
 		const phoneInput = document.querySelector('#phone');
