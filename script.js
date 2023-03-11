@@ -5,11 +5,11 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 // ------------------------------------------------
 
-
 let nav = document.querySelector("nav");
 let span_icon_chevron = document.querySelector("#span-icon-chevron");
 let icon_menu = document.querySelector("#icon-menu");
 let btn_shopee = document.querySelector("#btn-canais-venda");
+let divSubMenu = document.querySelector("#submenu-nav")
 
 nav.addEventListener(`click`, showSubMenu);
 btn_shopee.addEventListener('click', () => {
@@ -18,6 +18,7 @@ btn_shopee.addEventListener('click', () => {
 
 function showSubMenu(){
     nav.classList.toggle("min-height-submenu");
+    divSubMenu.classList.toggle("display-invisible");
     span_icon_chevron.classList.toggle("display-invisible");
     
     if (icon_menu.className == "fa fa-times"){
@@ -26,6 +27,22 @@ function showSubMenu(){
         icon_menu.className = "fa fa-times";
     }
 }
+
+// --------------PARA MENU ACOMPANHAR A PAGINA--------------
+let posicaoInicialNav = nav.offsetTop;
+window.addEventListener('scroll', () => {
+  let posicaoScrollAtual = document.documentElement.scrollTop;
+
+  if (posicaoScrollAtual >= posicaoInicialNav){
+    nav.classList.add("positionFixed");
+  } else if(nav.classList.contains("positionFixed")){
+    nav.classList.remove("positionFixed");
+    nav.style.top = posicaoInicialNav;
+  }
+
+});
+
+// -----------------------------------------------------------
 
 // POSICAO ICONS ASIDE PRODUTOS + VENDIDOS
 let iconLeft = document.querySelector("#icon-left");
