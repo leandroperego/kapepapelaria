@@ -284,11 +284,19 @@ section#container-mais-vendidos{
     position: relative;
 }
 
+#container-mais-vendidos:first-child{
+    text-align: center;
+}
+
+i.fa-star{
+    color: #f6e148;
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    border-top: 3px solid;
+    /* border-top: 3px solid; */
     padding-top: 5rem;
   }
   
@@ -383,7 +391,7 @@ a.a-contatos{
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 

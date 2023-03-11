@@ -209,7 +209,7 @@ function mudarCorIconsAside(){
 
 function trocarEmoji(direcao, posicao){
   let emojiAtual = direcao.innerText.codePointAt(direcao.innerText).toString()
-  console.log(emojiAtual)
+  // console.log(emojiAtual)
   // console.log(String.fromCodePoint(emojiAtual))
   if (direcao == iconLeft){
     if (emojiAtual == "128072" && posicao == "inicio"){
