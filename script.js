@@ -163,16 +163,75 @@ function fimScroll(){
 function inicioScroll(){
   return cardsContainer.scrollLeft == 0;
 }
+// ESSA FUNÇÃO ERA USADA POR ICONS FONT AWESOME
+// function mudarCorIconsAside(){
+//   if (fimScroll()){
+//     iconRight.style.color = "gray";
+//   } else if(inicioScroll()){
+//     iconLeft.style.color = "gray";
+//   } else{
+//     iconLeft.style.color = "inherit";
+//     iconRight.style.color = "inherit";
+//   }
+// }
 
+// FUNCAO PARA ICONS FONT AWESOME
+// function mudarCorIconsAside(){
+//   if (fimScroll()){
+//     iconRight.style.color = "gray";
+//   } else if(inicioScroll()){
+//     iconLeft.style.color = "gray";
+//   } else{
+//     iconLeft.style.color = "inherit";
+//     iconRight.style.color = "inherit";
+//   }
+// }
+
+// FUNCAO PARA EMOJIS
 function mudarCorIconsAside(){
   if (fimScroll()){
-    iconRight.style.color = "gray";
+    iconRight.style.opacity = "0.5";
+    trocarEmoji(iconLeft, "fim");
+    trocarEmoji(iconRight, "fim");
+    // pode colocar animacao aqui
   } else if(inicioScroll()){
-    iconLeft.style.color = "gray";
+    iconLeft.style.opacity = "0.5";
+    trocarEmoji(iconLeft, "inicio");
+    trocarEmoji(iconRight, "inicio");
+    // pode colocar animacao aqui
   } else{
-    iconLeft.style.color = "inherit";
-    iconRight.style.color = "inherit";
+    iconLeft.style.opacity = "inherit";
+    iconRight.style.opacity = "inherit";
+    trocarEmoji(iconLeft, "meio");
+    trocarEmoji(iconRight, "meio");
   }
+}
+
+function trocarEmoji(direcao, posicao){
+  let emojiAtual = direcao.innerText.codePointAt(direcao.innerText).toString()
+  console.log(emojiAtual)
+  // console.log(String.fromCodePoint(emojiAtual))
+  if (direcao == iconLeft){
+    if (emojiAtual == "128072" && posicao == "inicio"){
+      direcao.innerHTML = "&#9995;";
+    } else if (emojiAtual == '9995' && posicao == "fim"){
+      direcao.innerHTML = "&#128072;";
+    } else if (emojiAtual == '9995' && posicao == "meio"){
+      direcao.innerHTML = "&#128072;";
+    }
+  }
+
+  if (direcao == iconRight){
+    if (emojiAtual == "9995" && posicao == "inicio"){
+      direcao.innerHTML = "&#128073;";
+    } else if (emojiAtual == '128073' && posicao == "fim"){
+      direcao.innerHTML = "&#9995;";
+    } else if (emojiAtual == '9995' && posicao == "meio"){
+      direcao.innerHTML = "&#128073;";
+    }
+  }
+
+
 }
 
 cardsContainer.addEventListener('touchstart', onTouchStart);
