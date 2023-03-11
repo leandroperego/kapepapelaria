@@ -88,6 +88,7 @@ function onTouchStart(e) {
   startPosition = e.touches[0].clientX;
   isDragging = true;
 
+
   // interrompe a animação atual, se houver
   cancelAnimationFrame(animationId);
 }
