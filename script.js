@@ -12,6 +12,7 @@ let btn_shopee = document.querySelector("#btn-canais-venda");
 let divSubMenu = document.querySelector("#submenu-nav")
 
 nav.addEventListener(`click`, showSubMenu);
+
 btn_shopee.addEventListener('click', () => {
     window.open("https://shopee.com.br/kapepapelaria", "_blank");
 });
@@ -295,3 +296,11 @@ inputEmail.addEventListener("focus", () => {
   labelInputEmail.style.left = '0';
   labelInputEmail.style.fontSize = '14px';
 });
+
+// ----------------CARREGAR NAV NO FOOTER--------------
+let footer_menu = document.querySelector("#footer-menu");
+let itens_menu = divSubMenu.children[0].cloneNode(true);
+
+footer_menu.append(itens_menu)
+
+// -------------------------------------

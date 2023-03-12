@@ -156,7 +156,42 @@ nav div#submenu-nav{
     background-color: rgba(245, 245, 245, 0.7);
     position: absolute;
     left: 5%;
+    padding: 15px;
     animation: abrirPlanoDeFundo 1000ms 100ms forwards;
+    font-family: var(--font30);
+}
+
+nav div#submenu-nav ul{
+    background-color: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    animation: surgir 1000ms 200ms backwards;
+}
+
+nav div#submenu-nav ul li{
+    text-transform: uppercase;
+}
+
+a.link-nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+a.link-nav:link{
+    color: var(--azul-marinho);
+}
+a.link-nav:visited{
+    color: var(--azul-marinho);
+}
+a.link-nav:hover{
+    color: var(--rosa-escuro);
+    font-weight: bolder;
+    /* text-decoration: underline; */
 }
 
 nav div#container-nav-menu{
