@@ -745,7 +745,23 @@ input[type="submit"]:hover {
     background-color: #3e8e41;
 }
 
+#div-alert-form{
+    padding: 10px 4px;
+    color: var(--rosa-escuro);
+    text-align: center;
+}
+
 .positionFixed{
     position: fixed;
     width: 100%;
 }
+
+@keyframes btn_enviar{
+    0%{
+        background-color: #4CAF50;
+    }
+    100%{
+        background-color: var(--azul-marinho);
+    }
+}
+

@@ -254,26 +254,67 @@ const form = document.querySelector('form');
 
 		form.addEventListener('submit', (event) => {
 			event.preventDefault();
-			if (nameInput.value.trim() === '') {
-				alert('Por favor, preencha o campo Nome.');
-				nameInput.focus();
-				return;
-			}
-			if (phoneInput.value.trim() === '') {
-				alert('Por favor, preencha o campo Telefone.');
-				phoneInput.focus();
-				return;
-			}
-			if (emailInput.value.trim() === '') {
-				alert('Por favor, preencha o campo E-mail.');
-				emailInput.focus();
-				return;
-			}
-			if (subjectInput.value.trim() === '') {
-				alert('Por favor, preencha o campo Assunto.');
-				subjectInput.focus();
-      }
+      form.action = "https://formspree.io/f/mvonqbnb";
+      
+      // obtém os dados do formulário
+  const formData = new FormData(event.target);
+  
+  // envia os dados do formulário para o Formspree via API Fetch
+  fetch(event.target.action, {
+    method: "POST",
+    headers: {
+      "Accept": "application/json"
+    },
+    body: formData
+  })
+  .then(response => {
+    // redireciona o usuário para a página de destino após o envio bem-sucedido do formulário
+    // window.location.href = "/thank_you.html";
+    redirectForm();
+  })
+  .catch(error => console.error(error));
+
+			// if (nameInput.value.trim() === '') {
+			// 	alert('Por favor, preencha o campo Nome.');
+			// 	nameInput.focus();
+			// 	return;
+			// }
+			// if (phoneInput.value.trim() === '') {
+			// 	alert('Por favor, preencha o campo Telefone.');
+			// 	phoneInput.focus();
+			// 	return;
+			// }
+			// if (emailInput.value.trim() === '') {
+			// 	alert('Por favor, preencha o campo E-mail.');
+			// 	emailInput.focus();
+			// 	return;
+			// }
+			// if (subjectInput.value.trim() === '') {
+			// 	alert('Por favor, preencha o campo Assunto.');
+			// 	subjectInput.focus();
+      // }
+
+      // form.submit();
     });
+
+function redirectForm(){
+  // limpar os campos do form
+  form.reset();
+
+  // exibir msg de enviado com sucesso
+  let divAlert = document.querySelector("#div-alert-form");
+  let buttonEnviar = document.querySelector("#submitForm");
+
+  divAlert.innerText = "Obrigado pelo contato. Retornaremos o mais breve.";
+
+  buttonEnviar.value = "Enviado";
+  buttonEnviar.style.animation = "btn_enviar 1000ms forwards";
+
+  setTimeout(() => {
+    buttonEnviar.value = "Enviar";
+    buttonEnviar.style.animation = "btn_enviar 1000ms reverse";
+  }, "5000");
+}
 
 // configuracao form
 let inputEmail = document.querySelector("#email");

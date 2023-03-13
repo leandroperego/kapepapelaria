@@ -333,7 +333,7 @@
                         <h2>OU PREENCHA O FORMULÁRIO</h2>
                         <p>Que nós retornamos pra você.</p>
                     </div>
-                    <form>
+                    <form action="" method="POST">
                         <div class="form-group">
                             <input type="text" class="form-inputs" id="name" name="name" required>
                             <label for="name">Nome</label>
@@ -354,8 +354,11 @@
                             <textarea class="form-inputs" id="message" name="message" required></textarea>
                             <label for="message">Mensagem</label>
                         </div>
-                        <input type="submit" value="Enviar">
+                        <input id="submitForm" class="fifth" type="submit" value="Enviar">
                     </form>
+                    <div id="div-alert-form">
+
+                    </div>
 
                 </section>
 
