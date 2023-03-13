@@ -191,12 +191,12 @@ function inicioScroll(){
 // FUNCAO PARA EMOJIS
 function mudarCorIconsAside(){
   if (fimScroll()){
-    iconRight.style.opacity = "0.5";
+    iconRight.style.opacity = "0.4";
     trocarEmoji(iconLeft, "fim");
     trocarEmoji(iconRight, "fim");
     // pode colocar animacao aqui
   } else if(inicioScroll()){
-    iconLeft.style.opacity = "0.5";
+    iconLeft.style.opacity = "0.4";
     trocarEmoji(iconLeft, "inicio");
     trocarEmoji(iconRight, "inicio");
     // pode colocar animacao aqui
