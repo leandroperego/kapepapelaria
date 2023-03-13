@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&family=Kreon:wght@500;600;700&family=Mulish:wght@500;600;700;800;900&family=Patrick+Hand&family=Roboto+Mono:wght@100;200;300&family=Rubik:wght@500;600;700;800&family=Space+Mono&family=Ubuntu:wght@300;400&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Mono:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
     margin: 0;
@@ -10,17 +11,6 @@
     font-size: 62.5%;
 
     /* FONTS */
-    /* --font60: 'Josefin Sans', sans-serif;
-    --font30: 'Yeseva One', cursive; */
-
-    /* --font60: 'Roboto Mono', monospace;
-    --font30: 'Rubik', sans-serif; */
-    
-    /* --font60: 'Space Mono', monospace;
-    --font30: 'Mulish', sans-serif; */
-
-    /* --font60: 'Ubuntu', sans-serif;
-    --font30: 'Kreon', serif; */
 
     --font60: 'Roboto Mono', monospace;
     --font30: 'Patrick Hand', cursive;
@@ -151,6 +141,7 @@ nav{
 
 nav div#submenu-nav{
     width: 90%;
+    height: 100%;
     margin: 0 auto;
     /* height: 80%; */
     background-color: rgba(245, 245, 245, 0.7);

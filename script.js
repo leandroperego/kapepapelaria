@@ -214,21 +214,21 @@ function trocarEmoji(direcao, posicao){
   // console.log(String.fromCodePoint(emojiAtual))
   if (direcao == iconLeft){
     if (emojiAtual == "128072" && posicao == "inicio"){
-      direcao.innerHTML = "&#9995;&#127999;";
+      direcao.innerHTML = "&#9995;";
     } else if (emojiAtual == '9995' && posicao == "fim"){
-      direcao.innerHTML = "&#128072;&#127999;";
+      direcao.innerHTML = "&#128072;";
     } else if (emojiAtual == '9995' && posicao == "meio"){
-      direcao.innerHTML = "&#128072;&#127999;";
+      direcao.innerHTML = "&#128072;";
     }
   }
 
   if (direcao == iconRight){
     if (emojiAtual == "9995" && posicao == "inicio"){
-      direcao.innerHTML = "&#128073;&#127999;";
+      direcao.innerHTML = "&#128073;";
     } else if (emojiAtual == '128073' && posicao == "fim"){
-      direcao.innerHTML = "&#9995;&#127999;";
+      direcao.innerHTML = "&#9995;";
     } else if (emojiAtual == '9995' && posicao == "meio"){
-      direcao.innerHTML = "&#128073;&#127999;";
+      direcao.innerHTML = "&#128073;";
     }
   }
 
