@@ -584,6 +584,10 @@ main>article{
     font-size: 1.5rem;
 }
 
+a .btn_padrao{
+    color: var(--azul-marinho);
+}
+
 .btn_padrao:hover{
     cursor: pointer;
     background-color: var(--azul-marinho);
@@ -674,10 +678,10 @@ a:hover{
     text-align: center;
 }
 
-#header-form h2{
+/* #header-form h2{
     text-decoration: underline;
     text-decoration-color: var(--rosa-escuro);
-}
+} */
 
 .form-group{
 	position: relative;
