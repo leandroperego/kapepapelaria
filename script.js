@@ -342,6 +342,21 @@ inputEmail.addEventListener("focus", () => {
 let footer_menu = document.querySelector("#footer-menu");
 let itens_menu = divSubMenu.children[0].cloneNode(true);
 
-footer_menu.append(itens_menu)
+footer_menu.append(itens_menu);
 
 // -------------------------------------
+
+// carregar nav desktop
+let containerNavDesktop = document.querySelector("#container-nav-desktop");
+let itens_menu_copy = divSubMenu.children[0].cloneNode(true);
+
+if (window.innerWidth >= '1025'){
+  containerNavDesktop.append(itens_menu_copy);
+  nav.removeEventListener(`click`, showSubMenu);
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= '1025'){
+    containerNavDesktop.append(itens_menu_copy);
+  }
+});

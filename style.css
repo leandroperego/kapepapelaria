@@ -17,7 +17,7 @@
     --font10: 'Roboto', sans-serif;
 
     /* COLORS */
-    --azul-marinho: #121822;
+    --azul-marinho: #121721;
     --rosa-escuro: #fb0060;
     --amarelo: #f6e148;
     --branco: whitesmoke;
@@ -200,7 +200,7 @@ a.link-nav:hover{
     font-size: inherit;
 }
 
-nav div#container-nav-menu{
+nav div.container-nav-menu{
     width: 100%;
     min-height: 5rem;
     display: flex;
@@ -209,6 +209,10 @@ nav div#container-nav-menu{
     padding-left: 3rem;
     gap: 1rem;
     position: relative;
+}
+
+#nav-desktop{
+    display: none;
 }
 
 #position-nav{
@@ -775,3 +779,52 @@ input[type="submit"]:hover {
     }
 }
 
+@media (min-width:769px){
+
+}
+
+@media (min-width: 1025px){
+    #nav-desktop{
+        display: block;
+        min-height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+
+    #nav-mobile{
+        display: none;
+    }
+
+    nav div.container-nav-menu{
+        padding-left: 0;
+    }
+
+    #container-nav-desktop{
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    #container-nav-desktop ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7rem;
+        font-family: var(--font30);
+    }
+
+    #container-nav-desktop ul li a:hover{
+        color: inherit;
+        font-weight: normal;
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+
+    #container-nav-desktop ul i{
+        display: none;
+        /* color: var(--branco); */
+    }
+
+}
