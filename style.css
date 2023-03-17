@@ -158,14 +158,21 @@ nav div#submenu-nav ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     width: 100%;
     height: 100%;
     gap: 1rem;
+    padding-left: 8%;
     animation: surgir 1500ms 400ms backwards;
 }
 
 nav div#submenu-nav ul li{
     text-transform: capitalize;
+}
+
+div#submenu-nav ul li i{
+    display: none;
+    /* color: var(--branco); */
 }
 
 a.link-nav{
@@ -572,7 +579,6 @@ main>article{
 }
 
 .min-height-submenu{
-
     animation: abriSubMenu 1000ms forwards;
 }
 
@@ -780,7 +786,7 @@ input[type="submit"]:hover {
 }
 
 @media (min-width:769px){
-
+    
 }
 
 @media (min-width: 1025px){

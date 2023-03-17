@@ -313,7 +313,8 @@ function redirectForm(){
   setTimeout(() => {
     buttonEnviar.value = "Enviar";
     buttonEnviar.style.animation = "btn_enviar 1000ms reverse";
-  }, "5000");
+    divAlert.innerText = "";
+  }, "7000");
 }
 
 // configuracao form
