@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Mono:wght@100;200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 *{
     margin: 0;
@@ -12,9 +12,9 @@
 
     /* FONTS */
 
-    --font60: 'Roboto Mono', monospace;
+    --font10: 'Roboto Mono', monospace;
     --font30: 'Patrick Hand', cursive;
-    --font10: 'Roboto', sans-serif;
+    --font60: 'Roboto', sans-serif;
 
     /* COLORS */
     --azul-marinho: #121721;
@@ -51,6 +51,7 @@ body{
     font-size: 1.6rem;
     background-color: var(--branco);
     font-family: var(--font60);
+    font-weight: 300;
 }
 
 .logo{
@@ -103,6 +104,7 @@ section#container-description-initial-page{
     font-size: 2rem;
     text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     line-height: 2.5rem;
+    font-family: var(--font10);
 }
 
 section#container-h1{
@@ -119,6 +121,7 @@ h1{
 
 span#txt-premium{
     background-color: var(--laranja);
+    font-family: var(--font10);
 }
 
 section#header-logo{
@@ -216,6 +219,8 @@ nav div.container-nav-menu{
     padding-left: 3rem;
     gap: 1rem;
     position: relative;
+    font-family: var(--font10);
+    font-weight: 400;
 }
 
 #nav-desktop{
@@ -456,15 +461,18 @@ section#container-links-contact{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
 }
 
 a.a-contatos{
-    padding: 1rem;
+    padding: 4px;
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.4rem;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 a.a-contatos:first-child{
@@ -559,6 +567,18 @@ footer #direitos-autorais i{
 /* CONFIGURAÇÕES GERAIS */
 h1, h2, h3, h4{
     font-family: var(--font30);
+}
+
+p{
+    line-height: 25px;
+}
+
+strong {
+    background-color: var(--laranja);
+}
+
+.strong-canais-venda{
+    background-color: rgba(132, 128, 186, 0.3)
 }
 
 .section-main-padrao{

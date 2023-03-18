@@ -357,7 +357,10 @@ if (window.innerWidth >= '1025'){
 }
 
 window.addEventListener('resize', () => {
+  nav.addEventListener(`click`, showSubMenu);
   if (window.innerWidth >= '1025'){
     containerNavDesktop.append(itens_menu_copy);
+    nav.removeEventListener(`click`, showSubMenu);
   }
+
 });
