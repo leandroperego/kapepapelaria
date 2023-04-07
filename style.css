@@ -144,38 +144,42 @@ nav{
 }
 
 nav div#submenu-nav{
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
     /* height: 80%; */
-    background-color: rgba(245, 245, 245, 0.7);
+    /* background-color: rgba(245, 245, 245, 0.5); */
+    /* border-radius: 3rem 3rem; */
     position: absolute;
-    left: 5%;
-    padding: 15px;
+    /* left: 5%; */
+    /* padding: 15px; */
     animation: abrirPlanoDeFundo 1000ms 100ms forwards;
     font-family: var(--font30);
 }
 
 nav div#submenu-nav ul{
-    background-color: none;
+    /* background-color: rgba(245, 245, 245, 0.5); */
+    border-top: 2px dashed var(--azul-marinho);
     list-style-type: none;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    width: 100%;
+    width: 90%;
     height: 100%;
-    gap: 1rem;
-    padding-left: 8%;
+    margin: 0 auto;
+    gap: 1.5rem;
+    border-radius: 0 0 3rem 3rem;
+    /* padding-left: 8%; */
+    padding: 2rem 0 2rem 1rem;
     animation: surgir 1500ms 400ms backwards;
 }
 
 nav div#submenu-nav ul li{
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 div#submenu-nav ul li i{
     display: none;
-    /* color: var(--branco); */
+    /* color: var(--branco);    */
 }
 
 a.link-nav{
@@ -640,7 +644,7 @@ a .btn_padrao{
     }
 
     100%{
-        min-height: 35rem;
+        min-height: 40rem;
     }
 }
 
@@ -650,7 +654,7 @@ a .btn_padrao{
     }
 
     100%{
-        min-height: 22rem;
+        min-height: 26rem;
     }
 }
 
@@ -812,7 +816,7 @@ input[type="submit"]:hover {
 @media (min-width: 1025px){
     #nav-desktop{
         display: block;
-        min-height: 7rem;
+        min-height: 6rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -852,5 +856,24 @@ input[type="submit"]:hover {
         display: none;
         /* color: var(--branco); */
     }
+
+    main>article{
+        padding: 9rem 0;
+        min-height: 100vh;
+    }
+
+    .section-main-padrao h2{
+        text-align: center;
+    }
+
+    /* section#container-nossa-historia,
+    section#container-canais-venda,
+    section#container-mais-vendidos{
+        border: 2px solid yellow;
+    } */
+
+    /* section#btn-canais-de-compra button{
+        width: 20%;
+    } */
 
 }
