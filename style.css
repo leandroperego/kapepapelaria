@@ -279,8 +279,8 @@ article#article-main-4{
     background-color: rgba(230, 171, 130, 0.2);
 }
 
-section#container-nossa-historia,
-section#container-canais-venda,
+section#container-nossa-historia div#div-nossa-historia-texto,
+section#container-canais-venda div.lado-direito-article,
 section#container-mais-vendidos{
     display: flex;
     flex-direction: column;
@@ -814,6 +814,11 @@ input[type="submit"]:hover {
 }
 
 @media (min-width: 1025px){
+
+    body{
+        font-size: 2rem;
+    }
+
     #nav-desktop{
         display: block;
         min-height: 6rem;
@@ -859,21 +864,38 @@ input[type="submit"]:hover {
 
     main>article{
         padding: 9rem 0;
-        min-height: 100vh;
+        height: 100vh;
+    }
+    
+    .section-main-padrao{
+        height: 100%;
     }
 
     .section-main-padrao h2{
         text-align: center;
+        height: 10%;
     }
 
-    /* section#container-nossa-historia,
-    section#container-canais-venda,
-    section#container-mais-vendidos{
-        border: 2px solid yellow;
-    } */
+    .conteudo-flexbox{
+        height: 90%;
+        display: flex;
+    }
 
-    /* section#btn-canais-de-compra button{
-        width: 20%;
-    } */
+    .lado-esquerdo-article,
+    .lado-direito-article{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-imagens{
+        width: 25rem;
+    }
 
+    #container-canais-venda p{
+        line-height: 30px;
+    }
+
+    
 }
