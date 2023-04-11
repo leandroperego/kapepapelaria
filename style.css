@@ -343,9 +343,21 @@ section#container-mais-vendidos{
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 100%;
 }
 
-#container-mais-vendidos:first-child{
+#container-mais-vendidos>div:first-child{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-titulo-mais-vendidos h2,
+#div-titulo-mais-vendidos span{
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -357,6 +369,7 @@ i.fa-star{
     position: relative;
     overflow: hidden;
     width: 100%;
+    height: 100%;
   }
   
   .carousel-container {
