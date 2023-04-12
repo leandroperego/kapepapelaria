@@ -942,6 +942,10 @@ input[type="submit"]:hover {
         min-width: calc(100% / 4);
     }
 
+    .produto-botao{
+        visibility: hidden;
+    }
+
     .carousel-item:hover{
         border: 3px solid var(--rosa-escuro);
         border-radius: 10px;
