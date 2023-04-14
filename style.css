@@ -203,7 +203,7 @@ a.link-nav:hover{
 #nav-redes{
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     animation: surgir 1000ms 200ms backwards;
 }
 
